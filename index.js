@@ -1,28 +1,13 @@
 const farmAnimals = 'cow horse sheep pig chicken';
-const { moo, neigh, baa, oink, cluck } = {
-  moo: "cow",
-  neigh: "horse",
-  baa: "sheep",
-  oink: "pig",
-  cluck: "chicken"
-};
-const {
-  bessie, dolly, babe, little
-} = {
-  bessie: "cow",
-  dolly: "sheep",
-  babe: "pig",
-  little: "chicken",
- 
-};
-const {
-blackAndWhite, black, pink
-} = {
- 
-  blackAndWhite: "cow",
-  black: "sheep",
-  pink: "pig"
-};
+const {0: moo, 1: neigh, 2: baa, 3: oink, 4: cluck} = {...farmAnimals.split(' ')};
+
+console.log({moo, neigh, baa, oink, cluck});
+
+const {0: bessie, 2: dolly, 3: babe, 4: little} = {...farmAnimals.split(' ')};
+console.log({bessie, dolly, babe, little})
+
+const {0: blackAndWhite, 2: black, 3: pink} = {...farmAnimals.split(' ')};
+console.log({blackAndWhite, black, pink})
 
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
@@ -30,6 +15,9 @@ const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 const [red, orange, yellow, green, blue, indigo, violet] = colors;
 const [r, o, y, g, b, , v] = colors;
 const [, , , , , indg] = colors;
+console.log({red, orange, yellow, green, blue, indigo, violet});
+console.log({r, o, y, g, b, v});
+console.log({indg});
 
 
 const muppet = {
@@ -62,6 +50,13 @@ const {
   job,
   partner
 } = muppet;
+console .log({
+  muppetName,
+  color,
+  song,
+  job,
+  partner
+})
 
 const {
   album: {
